@@ -10,3 +10,8 @@ Projeto utilizando Arduino para a disciplina de Programação Avançada Orientad
 | Módulo Buzzer 5V Passivo | http://www.filipeflop.com/pd-6b583-modulo-buzzer-5v-passivo.html?ct=&p=1&s=1 | R$ 12,90
 | Display LCD 16x2 Backlight Azul | http://www.filipeflop.com/pd-6b7e4-display-lcd-16x2.html | R$ 16,90
 | **Total** | **R$ 146,50** | -
+
+## Links de projetos
+* http://blog.filipeflop.com/arduino/tocar-melodia-com-sensor-touch-e-buzzer.html
+* http://blog.filipeflop.com/display/controlando-um-lcd-16x2-com-arduino.html
+* https://github.com/WorldFamousElectronics/PulseSensor_Amped_Arduino

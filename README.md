@@ -24,3 +24,9 @@ Projeto utilizando Arduino para a disciplina de Programação Avançada Orientad
 * O módulo Buzzer e o Kit Jumpers misto, são do mesmo vendedor e o valor médio do frete está incluído no valor do Buzzer
 * O valor do frete no rodapé da tabela, refere-se ao valor médio do frete dos demais componenetes que é de outro vendedor
 * O Sensor de Frequência Cardíaca encontrei com outro vendedor
+
+## Lojas próximas
+Avenida Pedro de Toledo, 708
+Promissão
+Valdir Salinas
+3541-0241

@@ -1,3 +1,7 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
 /*  PulseSensor™ Starter Project   http://www.pulsesensor.com
 
   This an Arduino project. It's Best Way to Get Started with your PulseSensor™ & Arduino.
@@ -19,6 +23,7 @@ int Threshold = 550;            // Determine which Signal to "count as a beat", 
 
 // The SetUp Function:
 void setup() {
+  lcd.begin(16, 2);
   pinMode(LED13, OUTPUT);        // pin that will blink to your heartbeat!
   Serial.begin(9600);         // Set's up Serial Communication at certain speed.
 }

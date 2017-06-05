@@ -20,8 +20,8 @@ int PulseSensorPurplePin = 0;        // Pulse Sensor PURPLE WIRE connected to AN
 int LED13 = 13;   //  The on-board Arduion LED
 int btnLigaDesliga = 9;
 int buzzer = 8;
-int ledVermelho = 7;
-int ledVerde = 6;
+int ledVermelho = 6;
+int ledVerde = 7;
 int efetuarLeitura = 0;
 
 int Signal;                // holds the incoming raw data. Signal value can range from 0-1024
@@ -50,11 +50,13 @@ void loop() {
       
       efetuarLeitura = 1;
       Serial.println("Pressionou: Ligar " + (String)efetuarLeitura);
+      digitalWrite(ledVerde, HIGH);
       delay(500);
       
     } else {      
       
       efetuarLeitura = 0;      
+      digitalWrite(ledVerde, LOW);
       delay(500);
       
     }
@@ -69,26 +71,26 @@ void loop() {
     Serial.println(Signal);                    // Send the Signal value to Serial Plotter.
 
     if (Signal > Threshold) {                        // If the signal is above "550", then "turn-on" Arduino's on-Board LED.
-      digitalWrite(LED13, HIGH);
+      
+      digitalWrite(ledVermelho, HIGH);
       lcd.clear();
       lcd.setCursor(3, 0);
-      lcd.print((String)Signal + " BPM");
+      lcd.print((String)Signal + " S");
+      
     } else {
-      digitalWrite(LED13, LOW);               //  Else, the sigal must be below "550", so "turn-off" this LED.
+      
+      digitalWrite(ledVermelho, LOW);               //  Else, the sigal must be below "550", so "turn-off" this LED.
+      
     }
 
     tone(buzzer, 262, 100);
-    digitalWrite(ledVermelho, HIGH);
-    digitalWrite(ledVerde, HIGH);
     
   } else {
     
     noTone(buzzer);
-    digitalWrite(ledVermelho, LOW);
-    digitalWrite(ledVerde, LOW);
     
   }
   
-  delay(2);
+  delay(20);
   
 }
